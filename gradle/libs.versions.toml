@@ -1,0 +1,28 @@
+[versions]
+kotlin = "2.4.20"
+kotlinxDatetime = "0.8.0"
+kotlinxSerializationJSON = "1.10.0"
+kotlinxCoroutines = "1.11.0"
+agp = "9.2.0"
+composeBom = "2026.08.00"
+compose-plugin = "1.10.0"
+activityCompose = "1.13.0"
+
+[libraries]
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
+kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+
+androidxComposeBom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidxComposeUi = { module = "androidx.compose.ui:ui" }
+androidxComposeMaterial3 = { module = "androidx.compose.material3:material3" }
+androidxActivityCompose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+
+[bundles]
+kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
+
+[plugins]
+kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinCompose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
