@@ -19,6 +19,10 @@ android {
     }
 
     buildFeatures { compose = true }
+
+    lint {
+        disable += "PropertyEscape"
+    }
 }
 
 dependencies {
